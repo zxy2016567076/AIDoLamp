@@ -1,0 +1,105 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# YOLO / PyTorch model weights
+*.pt
+*.onnx
+*.tflite
+
+# ML model files
+*.pkl
+*.joblib
+
+# Audio temp files
+output.wav
+output.mp3
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Word temporary files
+~$*.docx
+~$*.doc
+
+# Temporary / log files
+*.tmp
+*.log
+
+# Environment variables (API keys)
+.env
+
+# Linter cache
+.ruff_cache/
+
+# Training data - sensitive (face/hand photos)
+training/gesture/**/data/raw/
+training/yolo/**/datasets/
+training/yolo/**/calibration_images/
+
+# Training logs & cache
+training/gesture/mediaPipe_Hands_pc/logs/
+training/gesture/mediaPipe_Hands_pc/__pycache__/
+training/yolo/identify_pc/__pycache__/
+training/yolo/identify_pi/__pycache__/
+training/robotic-arm/Robotic arm window/__pycache__/
+
+# Training video files
+training/yolo/**/*.mp4
+
+# Large model weights in training dirs (keep models/ copies)
+training/**/*.pkl
+training/**/*.pt
+training/**/*.onnx
+training/**/*.h5
+training/yolo/identify_pc/runs1/
+
+# YOLO training outputs (含训练时的真实类别名，可能泄露隐私；统一不提交)
+training/yolo/**/runs/
+training/yolo/**/test_image*.jpg
+
+# Pose training venv
+training/pose/pose/
+
+# Pose raw training data (large .npy/.h5 files)
+training/pose/*.npy
+training/pose/*.h5
+training/pose/posture_data.csv
+
+# Competition original files (contain personal info)
+competition/*.docx
+competition/*.pdf
+competition/*.txt
+competition/templates/
+# Keep competition/README.md (technical summary, no personal info)
+!competition/README.md
+
+# STM32 build artifacts & IDE metadata
+firmware/Debug/
+firmware/Release/
+firmware/Drivers/
+firmware/.settings/
+firmware/.cproject
+firmware/.project
+firmware/.mxproject
+firmware/*.launch
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.o
+*.d
+*.srec

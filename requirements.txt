@@ -1,0 +1,22 @@
+# AIDoLamp 上位机依赖（树莓派5 Python 3.11+）
+
+# 视觉 & AI
+opencv-python>=4.5.0
+mediapipe>=0.8.10
+ultralytics>=8.0.0         # YOLOv8
+numpy>=1.20.0
+scikit-learn>=1.0.0
+joblib>=1.0.0
+
+# 串口通信
+pyserial>=3.5
+
+# 语音交互
+pyaudio>=0.2.11
+pydub>=0.25.0
+baidu-aip>=4.16.0          # 百度语音 ASR/TTS
+requests>=2.25.0
+
+# 树莓派专用（仅在树莓派上安装）
+# picamera2
+# libcamera

@@ -1,0 +1,33 @@
+# 分层配置结构
+data_settings:
+  dataset_path: "data/processed/features.csv"
+  test_size: 0.2
+  split_seed: 42
+  enable_scaling: true  # 是否启用标准化
+
+cross_validation:
+  n_splits: 5
+  shuffle: true
+  cv_seed: 42  
+
+model_params:
+  model_type: "random_forest"  # 可选: random_forest/svm/xgboost
+  
+  # 公共参数
+  class_weight: "balanced"     # 类权重平衡策略
+  
+  # 随机森林特定参数
+  n_estimators: 200          # 建议范围 100-500
+  max_depth: null            # 推荐不限制改为None
+  min_samples_split: 5       # 推荐范围 2-10
+  
+  # XGBoost参数示例
+  xgb_params:
+    max_depth: 6             
+    learning_rate: 0.1       
+    subsample: 0.8
+    colsample_bytree: 0.8
+    
+metadata:
+  save_feature_importance: true
+  export_onnx: false         # 是否转换为ONNX格式
